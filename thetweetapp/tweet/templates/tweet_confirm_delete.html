@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}
+The Tweetbar
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Are you sure you want to delete your tweet!</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">
+        Delete
+    </button>
+    <a class="btn btn-success" href="{% url 'show_tweet' %}">Cancel</a>
+</form>
+
+{% endblock %}
